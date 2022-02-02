@@ -1,0 +1,55 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="titulo mb-3">CREATE REPORT</h5>
+        <form [formGroup]="form" (ngSubmit)="createReport ()" >
+            <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                    <i class="fas fa-user-circle"></i>
+                </span>
+                <input type="text" formControlName="id_handyman" class="form-control" placeholder="Id Handyman">
+              </div>
+              <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                    <i class="fas fa-id-card"
+                    ></i>
+                </span>
+                <input type="text" formControlName="id_service" class="form-control" placeholder="Id Service">
+              </div>
+              <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                    <i class="fas fa-calendar-week"></i>
+                </span>
+                <input type="text" formControlName="start_date" minlength="8" maxlength="8" class="form-control" placeholder="Start Date DD/MM/YY ">
+              </div>
+              <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                    <i class="fas fa-clock"></i>
+                </span>
+                <input type="text" formControlName="start_time" minlength="5" maxlength="5" class="form-control" placeholder="Start time HH:MM">
+              </div>
+              <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                    <i class="fas fa-calendar-week"></i>
+                </span>
+                <input type="text" formControlName="end_date" minlength="8" maxlength="8" class="form-control" placeholder="End Date DD/MM/YY ">
+              </div>
+              <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                    <i class="fas fa-clock"></i>
+                </span>
+                <input type="text" formControlName="end_time" minlength="5" maxlength="5" class="form-control" placeholder="End time HH:MM">
+              </div>
+              <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                    <i class="fas fa-calendar-week"></i>
+                </span>
+                <input type="text" formControlName="week" minlength="1" maxlength="2"  class="form-control" placeholder="Week number">
+              </div>
+              <div class="d-grid gap-2">
+                <button [disabled]="form.invalid" class="btn btn-success btn-lg" type="submit">
+                    <i class="fas fa-lock"></i> &nbsp; Save Record
+                </button>
+              </div>
+        </form>
+    </div>
+</div>
